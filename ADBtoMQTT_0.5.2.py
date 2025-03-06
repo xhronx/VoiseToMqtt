@@ -3,8 +3,9 @@ import paho.mqtt.client as mqtt
 import time
 
 mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
-mqttc.username_pw_set("test","test")
-mqttc.connect("192.168.0.11", 1883)
+#mqttc.username_pw_set("test","test")
+#mqttc.connect("192.168.0.11", 1883)
+mqttc.connect("127.0.0.1", 1883)
 
 def deal_with_stdout():
   for line in logcat_query.stdout:
